@@ -1,0 +1,24 @@
+aws_snowflake_dbt_project:
+  outputs:
+    dev:
+      account: xxxxxxxxxxx
+      database: AIRBNB
+      password: xxxxxxxxxxx
+      role: ACCOUNTADMIN
+      schema: dbt_schema
+      threads: 1
+      type: snowflake
+      user: NEROVISHNU
+      warehouse: COMPUTE_WH
+  target: dev
+walmart_project:
+  outputs:
+    dev:
+      catalog: dbt_airflow
+      host: xxxxxxxxxxx
+      http_path: /sql/1.0/warehouses/36460312446622c2
+      schema: dev
+      threads: 1
+      token: xxxxxxxxxxx
+      type: databricks
+  target: dev
